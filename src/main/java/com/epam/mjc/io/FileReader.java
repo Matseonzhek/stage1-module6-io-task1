@@ -14,7 +14,7 @@ public class FileReader {
                 profileData[i] = inString.substring(inString.indexOf(':') + 2).trim();
             }
         } catch (IOException ioException) {
-            System.out.println("Could not access data " + ioException);
+            ioException.printStackTrace();
         }
         return new Profile(profileData[0], Integer.parseInt(profileData[1]), profileData[2], Long.parseLong(profileData[3]));
     }
